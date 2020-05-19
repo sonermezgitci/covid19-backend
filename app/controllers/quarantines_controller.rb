@@ -1,0 +1,2 @@
+class QuarantinesController < ApplicationController
+end
