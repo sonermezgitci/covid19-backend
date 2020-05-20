@@ -6,6 +6,7 @@ class SymptomsController < ApplicationController
 
     def show 
     @symptom = Symptom.find(params[:id])
-    render json: @symptom, only: [:id, :fever, :cough, :tiredness], include: {user: {only: [:id, :name]}}
+    render json: @symptom
+    # only: [:id, :fever, :cough, :breath, :throat, :nose, :other], include: {user: {only: [:id, :name]}}
     end
 end 

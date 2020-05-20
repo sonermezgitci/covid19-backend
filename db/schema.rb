@@ -25,9 +25,12 @@ ActiveRecord::Schema.define(version: 2020_05_05_184602) do
 
   create_table "symptoms", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "fever"
-    t.integer "tiredness"
-    t.integer "cough"
+    t.string "fever"
+    t.string "cough"
+    t.string "breath"
+    t.string "throat"
+    t.string "nose"
+    t.string "other"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_symptoms_on_user_id"

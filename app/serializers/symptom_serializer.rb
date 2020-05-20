@@ -1,3 +1,4 @@
 class SymptomSerializer < ActiveModel::Serializer
-  attributes :fever, :cough, :tiredness
+  attributes :fever, :cough, :breath, :throat, :nose, :other
+
 end

@@ -1,24 +1,25 @@
 class UserSymptomsController < ApplicationController
     def index 
-        @user_symptoms = User_symptom.all
+        @user_symptoms = UserSymptom.all
+        
         render json: @user_symptoms 
     end 
 
     def show 
     
-    @user_symptom = User_symptom.find(params[:id])
+    @user_symptom = UserSymptom.find(params[:id])
     render json: @user_symptom
     
     end 
 
     
     def create 
-        user_symptom  = User_symptom.new(userSymptoms_params)
+        user_symptom  = UserSymptom.new(user_symptoms_params)
         if user_symptoms.save
             render json: user_symptoms
             # json:userSymptoms, status: :accepted 
         else 
-            render json: {errors: user_symptoms.error.full_messages}, status: :unprocessible_entity 
+            render json: {errors: userSymptoms.error.full_messages}, status: :unprocessible_entity 
         end 
     end 
     
