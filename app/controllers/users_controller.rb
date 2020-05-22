@@ -18,7 +18,7 @@ class UsersController < ApplicationController
         user = User.new(user_params)
         # byebug
         if user.save
-            render json: @user, status: :accepted 
+            render json: user, status: :accepted 
             # UserSerializer.new(@user), status: :accepted doesnt make fetch 
             
         else 

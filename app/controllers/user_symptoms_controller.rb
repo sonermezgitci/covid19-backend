@@ -8,7 +8,7 @@ class UserSymptomsController < ApplicationController
     def show 
     
     @user_symptom = UserSymptom.find(params[:id])
-    render json: @user_symptom
+    render json: user_symptom
     
     end 
 
