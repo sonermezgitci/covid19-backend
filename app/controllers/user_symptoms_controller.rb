@@ -34,6 +34,6 @@ class UserSymptomsController < ApplicationController
     
     private 
     def user_symptoms_params
-        params.require(:user_symptoms).permit(:id, :user_id, :symptom_id,user_attributes:[:name, :lastname,:gender,:age,:symptom_id],symptom_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id])
+        params.require(:user_symptoms).permit(:id, :user_id, :symptom_id,user_attributes:[:name, :lastname,:gender,:age,:symptom_id],symptom_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:days, :user_id])
     end 
 end
