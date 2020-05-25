@@ -1,3 +1,3 @@
 class QuarantineSerializer < ActiveModel::Serializer
-  attributes :days
+  attributes :startdate, :enddate
 end

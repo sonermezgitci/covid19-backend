@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     
     def index 
         @users = User.all
-        render json: @users, status: :accepted 
+        render json: @users
         # render json: UserSerializer.new(users)// when i uncomment this its also gives me error 
         #  for  get request for fetch  users but in the class they told us to render # json: UserSerializer.new(users)
     end 
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     def show 
         @user = User.find(params[:id])
+       
         render json: @user
         #  only: [:id, :name, :lastname, :gender, :age], include: {symptoms: {only: [:id, :fever, :cough, :tiredness]}}
     end 
@@ -28,6 +29,6 @@ class UsersController < ApplicationController
 
     private 
     def  user_params
-        params.require(:user).permit(:name, :lastname, :age, :gender, symptoms_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:days, :user_id])
+        params.require(:user).permit(:name, :lastname, :age, :gender, symptoms_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:startdate, :enddate, :user_id])
     end 
 end

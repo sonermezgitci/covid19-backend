@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 2020_05_05_184602) do
 
   create_table "quarantines", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "days"
+    t.string "startdate"
+    t.string "enddate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_quarantines_on_user_id"

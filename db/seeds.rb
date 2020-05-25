@@ -1,7 +1,7 @@
-User.destroy_all
 Symptom.destroy_all
 Quarantine.destroy_all
 UserSymptom.destroy_all
+User.destroy_all
 
 
 ali   = User.create(name: "Ali", lastname:"Bener", gender:"Male",age:43)
@@ -14,10 +14,10 @@ s2 = Symptom.create(fever: "No", cough:"No", breath:"No", throat:"No", nose:"Yes
 s3 = Symptom.create(fever: "Yes", cough:"Yes", breath:"No", throat:"No", nose:"No", other:"I have head ache", user_id:necati.id)
 s4 = Symptom.create(fever: "No", cough:"Yes", breath:"No", throat:"No", nose:"Yes", other:"I have heart problem", user_id:ayhan.id)
 
-q1 = Quarantine.create(days:64, user_id:ali.id)
-q2 = Quarantine.create(days:75, user_id:erhan.id)
-q3 = Quarantine.create(days:64, user_id:necati.id)
-q4 = Quarantine.create(days:64, user_id:ayhan.id)
+q1 = Quarantine.create(startdate:"2020-01-01",enddate:"2020-02-01",user_id:ali.id)
+q2 = Quarantine.create(startdate:"2020-02-01",enddate:"2020-03-01", user_id:erhan.id)
+q3 = Quarantine.create(startdate:"2020-03-01",enddate:"2020-04-01", user_id:necati.id)
+q4 = Quarantine.create(startdate:"2020-04-01",enddate:"2020-05-01", user_id:ayhan.id)
 
 u1 = UserSymptom.create(user_id:ali.id, symptom_id:s1.id)
 u2 = UserSymptom.create(user_id:erhan.id, symptom_id:s2.id)

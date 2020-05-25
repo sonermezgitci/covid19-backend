@@ -7,7 +7,7 @@ class UserSymptomsController < ApplicationController
 
     def show 
     
-    @user_symptom = UserSymptom.find(params[:id])
+    user_symptom = UserSymptom.find(params[:id])
     render json: user_symptom
     
     end 
@@ -34,6 +34,6 @@ class UserSymptomsController < ApplicationController
     
     private 
     def user_symptoms_params
-        params.require(:user_symptoms).permit(:id, :user_id, :symptom_id,user_attributes:[:name, :lastname,:gender,:age,:symptom_id],symptom_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:days, :user_id])
+        params.require(:user_symptoms).permit(:id, :user_id, :symptom_id,user_attributes:[:name, :lastname,:gender,:age,:symptom_id],symptom_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:start_dates,:end_dates :user_id])
     end 
 end
