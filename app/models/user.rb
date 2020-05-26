@@ -5,4 +5,5 @@ has_many :quarantines
 
 accepts_nested_attributes_for :symptoms
 accepts_nested_attributes_for :quarantines
+accepts_nested_attributes_for :user_symptoms
 end
