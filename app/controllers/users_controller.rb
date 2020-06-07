@@ -29,6 +29,6 @@ class UsersController < ApplicationController
 
     private 
     def  user_params
-        params.require(:user).permit(:name, :lastname, :age, :gender, symptoms_attributes: [:fever, :cough, :breath, :throat, :nose, :other,:user_id], quarantines_attributes: [:startdate, :enddate, :user_id])
+        params.require(:user).permit(:name, :lastname, :age, :gender, symptoms_attributes: [:fever, :cough, :breath, :throat, :nose, :other, :user_id], quarantines_attributes: [:startdate, :enddate, :user_id])
     end 
 end

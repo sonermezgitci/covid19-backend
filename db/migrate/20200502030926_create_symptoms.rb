@@ -8,6 +8,7 @@ class CreateSymptoms < ActiveRecord::Migration[6.0]
       t.string :throat
       t.string :nose
       t.string :other
+     
       t.timestamps
     end
   end
