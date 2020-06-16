@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  resources :user_symptoms
-  resources :quarantines
-  resources :commutes
-  resources :symptoms
-  resources :users
+resources :quarantines
+resources :symptoms
+resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
