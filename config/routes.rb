@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-resources :quarantines
-resources :symptoms
-resources :users
+resources :quarantines, only: [:index, :create]
+resources :symptoms, only: [:index, :create]
+resources :users, only: [:index, :create]
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
