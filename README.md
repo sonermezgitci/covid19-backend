@@ -20,20 +20,4 @@ Quarantines belongs to user model.
 
 
 
-  <div class="c1">
-              <ul>
-                <li class="c2">
-                  <a id="display-number"></a>
-                </li> 
-              </ul>
-            </div>
-            div.c1 li.c2 a {
-    width: 50%;
-  color: white;
-  font-size: 250%;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(203, 30, 255);
-    
-  }
-  table, th, 
+  
